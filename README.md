@@ -1,6 +1,10 @@
-# BloomsHugWebsite
+# BloomsHugWebsite 🌸
 
-A full-stack flowershop website built with HTML, CSS, JavaScript, PHP, and MySQL.
+A modern flower shop website showcasing frontend design using HTML, CSS, and JavaScript.
+
+**Frontend Live Demo:** [https://shaymaa-ma.github.io/BloomsHugWebsite/](https://shaymaa-ma.github.io/BloomsHugWebsite/)
+
+**Note:** This GitHub Pages version only includes the frontend. Backend features (PHP, database) are not functional here.  
 
 ## Features
 - Browse products by category
