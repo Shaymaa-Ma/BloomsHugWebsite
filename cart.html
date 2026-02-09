@@ -1,0 +1,108 @@
+<!-- cart.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping Cart - Blooms Hug</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-light">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm sticky-top">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand " href="index.html">
+                <img src="Blooms hug logo.jpg" class="rounded-pill" alt="Blooms Hug Logo" width="40" height="40"
+                    class="me-2" />
+                <span class="fw-bold" style="font-style:italic;">Blooms Hug</span>
+            </a>
+
+            <!-- Toggler -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navigation + Search + Icons -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Links -->
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html#about">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#best-sellers">Best Sellers</a> </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button"
+                            data-bs-toggle="dropdown">Occasions</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="index.html#modern">Seasonal Blooms</a></li>
+                            <li><a class="dropdown-item" href="index.html#wedding">Wedding Bouquets</a></li>
+                            <li><a class="dropdown-item" href="index.html#graduation">Graduation Blooms</a></li>
+                            <li><a class="dropdown-item" href="index.html#random">Random Bouquets</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="luxuryCollection.html">Luxury Collection</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+
+                <!-- Search Bar -->
+                <form class="d-flex ms-lg-3 mt-2 mt-lg-0" role="search" action="search.php" method="GET">
+                    <input class="form-control" style="margin-right: 1rem;" type="search" name="query"
+                        placeholder="Search category..." aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+
+                <!-- Icons: Cart + Profile -->
+                <ul class="navbar-nav ms-3 d-flex flex-row align-items-center">
+                    <li class="nav-item me-3">
+                        <a class="nav-link position-relative" href="cart.html" role="button">
+                            <i class="bi bi-cart" style="font-size: 1.4rem;"></i>
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                                id="cartCount">
+                                0
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.php">
+                            <i class="bi bi-person-circle" style="font-size: 1.5rem;"></i>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container mt-5">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2>Your Shopping Cart</h2>
+            <a href="index.html" class="btn btn-outline-success"><i class="bi bi-arrow-left-circle"></i> Back to
+                Shopping</a>
+        </div>
+
+        <div id="cartItems" class="mb-4"></div>
+
+        <div class="d-flex justify-content-between align-items-center">
+            <div id="totalAmount" class="h4">Total: $0.00</div>
+            <a href="checkout.html" class="btn btn-success">Checkout</a>
+        </div>
+
+        <div id="emptyCart" class="text-center mt-5" style="display: none;">
+            <p class="display-4">Your cart is empty!</p>
+            <a href="index.html" class="btn btn-success">Go back to shop</a>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap Bundle with Popper for menue -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="cart.js"></script>
+</body>
+
+</html>

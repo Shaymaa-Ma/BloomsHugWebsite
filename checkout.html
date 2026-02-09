@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Checkout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f7f0f5;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        form label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        form input[type="text"],
+        form input[type="tel"],
+        form input[type="time"],
+        form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            font-size: 1rem;
+            resize: vertical;
+        }
+        form input[type="submit"] {
+            margin-top: 25px;
+            background: #d6336c;
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        form input[type="submit"]:hover {
+            background: #b52c5a;
+        }
+    </style>
+</head>
+<body>
+<form id="checkoutForm">
+    <label for="fullname">Full Name:</label>
+    <input type="text" id="fullname" name="fullname" required>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" 
+           pattern="[0-9]{8,15}" 
+           title="Please enter a valid phone number with 8-15 digits"
+           required>
+
+    <label for="address">Delivery Address:</label>
+    <textarea id="address" name="address" required></textarea>
+
+    <label for="delivery_time">Preferred Delivery Time:</label>
+    <input type="time" id="delivery_time" name="delivery_time">
+
+    <label for="notes">Order Notes (Optional):</label>
+    <textarea id="notes" name="notes"></textarea>
+
+    <input type="submit" value="Place Order">
+</form>
+
+<script>
+document.getElementById('checkoutForm').addEventListener('submit', function(e) {
+    const phoneInput = document.getElementById('phone');
+
+    // Check if phone input is valid according to the pattern
+    if (!phoneInput.checkValidity()) {
+        alert(phoneInput.title); // Show the title message if invalid
+        phoneInput.focus();
+        e.preventDefault();
+        return;
+    }
+
+    // If valid, proceed
+    alert('Thank you! Your order has been placed successfully.');
+    localStorage.removeItem('cart');
+    localStorage.setItem('cartCount', 0);
+    window.location.href = 'cart.html';
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Collection</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <!-- For cart and profile icons (from CDN) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm sticky-top">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand " href="index.html">
+                <img src="Blooms hug logo.jpg" class="rounded-pill" alt="Blooms Hug Logo" width="40" height="40"
+                    class="me-2" />
+                <span class="fw-bold" style="font-style:italic;">Blooms Hug</span>
+            </a>
+
+            <!-- Toggler -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navigation + Search + Icons -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Links -->
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html#about">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#best-sellers">Best Sellers</a> </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button"
+                            data-bs-toggle="dropdown">Occasions</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="index.html#modern">Seasonal Blooms</a></li>
+                            <li><a class="dropdown-item" href="index.html#wedding">Wedding Bouquets</a></li>
+                            <li><a class="dropdown-item" href="index.html#graduation">Graduation Blooms</a></li>
+                            <li><a class="dropdown-item" href="index.html#random">Random Bouquets</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="luxuryCollection.html">Luxury Collection</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+
+                <!-- Search Bar -->
+                 <form class="d-flex ms-lg-3 mt-2 mt-lg-0" role="search" action="search.php" method="GET">
+                    <input class="form-control" style="margin-right: 1rem;" type="search" name="query"
+                        placeholder="Search category..." aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+
+                <!-- Icons: Cart + Profile -->
+                <ul class="navbar-nav ms-3 d-flex flex-row align-items-center">
+                    <li class="nav-item me-3">
+                        <a class="nav-link position-relative" href="cart.html" role="button">
+                            <i class="bi bi-cart" style="font-size: 1.4rem;"></i>
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                                id="cartCount">
+                                0
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.php">
+                            <i class="bi bi-person-circle" style="font-size: 1.5rem;"></i>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+<!--Luxury Collection-->
+<section id="luxury" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4">The Luxury Collection</h2>
+        <p class="text-center mb-4">Premium hand-tied bouquets made with rare and exquisite blooms for those special moments.</p>
+
+        <div class="row" id="luxury-row">
+            <!-- Item 1 -->
+            <div class="col-md-4 mb-4 luxury-item">
+                <div class="card h-100 shadow-sm fade-in">
+                    <div style="position: relative; height: 300px; overflow: hidden;">
+                        <img src="images/luxury1.jpeg" class="card-img-top" alt="Forever My Love" style="width:100%; height:100%; object-fit: cover;">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Forever My Love</h5>
+                        <p class="card-text">A romantic box featuring deep reds and soft pinks, perfect for expressing everlasting love.</p>
+                        <p class="card-text">$400</p>
+                        <button class="btn btn-success" onclick="addToCart('Forever My Love', 400,'images/luxury1.jpeg')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Item 2 -->
+            <div class="col-md-4 mb-4 luxury-item">
+                <div class="card h-100 shadow-sm fade-in">
+                    <div style="position: relative; height: 300px; overflow: hidden;">
+                        <img src="images/luxury2.jpeg" class="card-img-top" alt="Lovers Paradise" style="width:100%; height:100%; object-fit: cover;">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Lovers Paradise</h5>
+                        <p class="card-text">A soft blend of pinks, reds, yellows, and whites, perfect for celebrating love and affection.</p>
+                        <p class="card-text">$500</p>
+                        <button class="btn btn-success" onclick="addToCart('Lovers Paradise', 500,'images/luxury2.jpeg')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Item 3 -->
+            <div class="col-md-4 mb-4 luxury-item">
+                <div class="card h-100 shadow-sm fade-in">
+                    <div style="position: relative; height: 300px; overflow: hidden;">
+                        <img src="images/luxury3.jpeg" class="card-img-top" alt="Elegant Bliss" style="width:100%; height:100%; object-fit: cover;">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Elegant Bliss</h5>
+                        <p class="card-text">An elegant mix of vibrant and soft hues, a perfect balance of joy and grace.</p>
+                        <p class="card-text">$450</p>
+                        <button class="btn btn-success" onclick="addToCart('Elegant Bliss', 450,'images/luxury3.jpeg')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Item 4 -->
+            <div class="col-md-4 mb-4 luxury-item">
+                <div class="card h-100 shadow-sm fade-in">
+                    <div style="position: relative; height: 300px; overflow: hidden;">
+                        <img src="images/luxury4.png" class="card-img-top" alt="Hearts Desire - 270 Roses" style="width:100%; height:100%; object-fit: cover;">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Hearts Desire - 270 Roses</h5>
+                        <p class="card-text">A dazzling display of 270 roses, a perfect symbol of love and passion.</p>
+                        <p class="card-text">$650</p>
+                        <button class="btn btn-success" onclick="addToCart('Hearts Desire - 270 Roses', 650,'images/luxury4.png')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Item 5 -->
+            <div class="col-md-4 mb-4 luxury-item">
+                <div class="card h-100 shadow-sm fade-in">
+                    <div style="position: relative; height: 300px; overflow: hidden;">
+                        <img src="images/luxury5.jpeg" class="card-img-top" alt="Mother's Heart" style="width:100%; height:100%; object-fit: cover;">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Mothers Heart</h5>
+                        <p class="card-text">A soft and delicate blend of red and whites, the perfect tribute to the love of a mother.</p>
+                        <p class="card-text">$600</p>
+                        <button class="btn btn-success" onclick="addToCart('Mothers Heart', 600,'images/luxury5.jpeg')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Item 6 -->
+            <div class="col-md-4 mb-4 luxury-item">
+                <div class="card h-100 shadow-sm fade-in">
+                    <div style="position: relative; height: 300px; overflow: hidden;">
+                        <img src="images/luxury6.png" class="card-img-top" alt="Love In Roses" style="width:100%; height:100%; object-fit: cover;">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Love In Roses</h5>
+                        <p class="card-text">A beautiful heart box filled with rich red roses, symbolizing passionate love and romance.</p>
+                        <p class="card-text">$700</p>
+                        <button class="btn btn-success" onclick="addToCart('Love In Roses', 700,'images/luxury6.png')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hidden items 7-15 -->
+            <div class="col-md-4 mb-4 luxury-item" style="display:none;">
+                <div class="card h-100 shadow-sm fade-in">
+                    <div style="position: relative; height: 300px; overflow: hidden;">
+                        <img src="images/luxury7.png" class="card-img-top" alt="Mix Elegance Bouquet" style="width:100%; height:100%; object-fit: cover;">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Mix Elegance Bouquet</h5>
+                        <p class="card-text">A perfect harmony of soft pinks, purples, and yellows, ideal for any elegant occasion.</p>
+                        <p class="card-text">$250</p>
+                        <button class="btn btn-success" onclick="addToCart('Mix Elegance Bouquet', 250,'images/luxury7.png')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 luxury-item" style="display:none;">
+                <div class="card h-100 shadow-sm fade-in">
+                    <div style="position: relative; height: 300px; overflow: hidden;">
+                        <img src="images/luxury8.png" class="card-img-top" alt="Sophisticated Sanctuary" style="width:100%; height:100%; object-fit: cover;">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Sophisticated Sanctuary</h5>
+                        <p class="card-text">A refined selection of vibrant colors designed to evoke sophistication and joy.</p>
+                        <p class="card-text">$200</p>
+                        <button class="btn btn-success" onclick="addToCart('Sophisticated Sanctuary', 200,'images/luxury8.png')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 luxury-item" style="display:none;">
+                <div class="card h-100 shadow-sm fade-in">
+                    <div style="position: relative; height: 300px; overflow: hidden;">
+                        <img src="images/luxury9.png" class="card-img-top" alt="Elegance Red Tulips" style="width:100%; height:100%; object-fit: cover;">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Elegance Red Tulips</h5>
+                        <p class="card-text">A stunning arrangement of elegant red tulips, the epitome of classic beauty and grace.</p>
+                        <p class="card-text">$250</p>
+                        <button class="btn btn-success" onclick="addToCart('Elegance Red Tulips', 250,'images/luxury9.png')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 luxury-item" style="display:none;">
+                <div class="card h-100 shadow-sm fade-in">
+                    <div style="position: relative; height: 300px; overflow: hidden;">
+                        <img src="images/luxury10.jpeg" class="card-img-top" alt="White Joyful Moments" style="width:100%; height:100%; object-fit: cover;">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">White Joyful Moments</h5>
+                        <p class="card-text">A refreshing and pure white box to bring joy and serenity to any moment.</p>
+                        <p class="card-text">$250</p>
+                        <button class="btn btn-success" onclick="addToCart('White Joyful Moments', 250,'images/luxury10.jpeg')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 luxury-item" style="display:none;">
+                <div class="card h-100 shadow-sm fade-in">
+                    <div style="position: relative; height: 300px; overflow: hidden;">
+                        <img src="images/luxury11.jpeg" class="card-img-top" alt="Red Joyful Moments" style="width:100%; height:100%; object-fit: cover;">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Red Joyful Moments</h5>
+                        <p class="card-text">A radiant mix of red flowers, creating a joyful and passionate display for any occasion.</p>
+                        <p class="card-text">$270</p>
+                        <button class="btn btn-success" onclick="addToCart('Red Joyful Moments', 270,'images/luxury11.jpeg')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 luxury-item" style="display:none;">
+                <div class="card h-100 shadow-sm fade-in">
+                    <div style="position: relative; height: 300px; overflow: hidden;">
+                        <img src="images/luxury12.jpeg" class="card-img-top" alt="Pink Joyful Moments" style="width:100%; height:100%; object-fit: cover;">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Pink Joyful Moments</h5>
+                        <p class="card-text">A burst of pink blooms, designed to fill any space with happiness and charm.</p>
+                        <p class="card-text">$250</p>
+                        <button class="btn btn-success" onclick="addToCart('Pink Joyful Moments', 250,'images/luxury12.jpeg')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 luxury-item" style="display:none;">
+                <div class="card h-100 shadow-sm fade-in">
+                    <div style="position: relative; height: 300px; overflow: hidden;">
+                        <img src="images/luxury13.png" class="card-img-top" alt="White Elegance Heart" style="width:100%; height:100%; object-fit: cover;">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">White Elegance Heart - 200 roses</h5>
+                        <p class="card-text">A breathtaking heart-shaped arrangement of 200 white roses flowers, symbolizing purity and elegance.</p>
+                        <p class="card-text">$350</p>
+                        <button class="btn btn-success" onclick="addToCart('White Elegance Heart - 200 roses', 350,'images/luxury13.png')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 luxury-item" style="display:none;">
+                <div class="card h-100 shadow-sm fade-in">
+                    <div style="position: relative; height: 300px; overflow: hidden;">
+                        <img src="images/luxury14.png" class="card-img-top" alt="Red Elegance Heart" style="width:100%; height:100%; object-fit: cover;">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Red Elegance Heart - 200 Roses</h5>
+                        <p class="card-text">A spectacular heart-shaped bouquet of 200 red roses, embodying love, passion, and elegance.</p>
+                        <p class="card-text">$500</p>
+                        <button class="btn btn-success" onclick="addToCart('Red Elegance Heart - 200 Roses', 500,'images/luxury14.png')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 luxury-item" style="display:none;">
+                <div class="card h-100 shadow-sm fade-in">
+                    <div style="position: relative; height: 300px; overflow: hidden;">
+                        <img src="images/luxury15.png" class="card-img-top" alt="Pink Elegance Heart" style="width:100%; height:100%; object-fit: cover;">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Pink Elegance Heart - 200 Roses</h5>
+                        <p class="card-text">A heart-shaped bouquet of 200 pink roses, a stunning display of affection and grace.</p>
+                        <p class="card-text">$300</p>
+                        <button class="btn btn-success" onclick="addToCart('Pink Elegance Heart - 200 Roses', 300,'images/luxury15.png')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-3">
+            <button id="luxury-toggle" class="btn btn-pink">View More</button>
+        </div>
+    </div>
+</section>
+
+<style>
+/* Pink View More button */
+.btn-pink {
+    background-color: #ff69b4;
+    color: #fff;
+    border: none;
+}
+.btn-pink:hover {
+    background-color: #ff85c1;
+    color: #fff;
+}
+
+/* Fade-in animation */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.8s forwards;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+</style>
+
+<script>
+const luxuryBtn = document.getElementById('luxury-toggle');
+const luxuryItems = document.querySelectorAll('.luxury-item');
+let luxuryExpanded = false;
+
+luxuryBtn.addEventListener('click', () => {
+    luxuryExpanded = !luxuryExpanded;
+    luxuryItems.forEach((item, index) => {
+        if (index >= 6) {
+            if (luxuryExpanded) {
+                item.style.display = 'block';
+                item.classList.add('fade-in');
+            } else {
+                item.style.display = 'none';
+            }
+        }
+    });
+    luxuryBtn.textContent = luxuryExpanded ? 'View Less' : 'View More';
+});
+</script>
+
+
+    <!-- Footer Section -->
+<footer class="bg-dark text-white pt-5" id="footer">
+    <div class="container">
+        <div class="row">
+            <!-- Quick Links Column -->
+            <div class="col-md-4 mb-4 footer-column">
+                <h5 class="mb-3">Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#demo" class="text-white text-decoration-none footer-link">Home Page</a></li>
+                    <li><a href="#about" class="text-white text-decoration-none footer-link">About Us</a></li>
+                    <li><a href="#refund-policy" class="text-white text-decoration-none footer-link">Refund & Returns Policy</a></li>
+                    <li><a href="privacy-policy.html" class="text-white text-decoration-none footer-link">Privacy Policy</a></li>
+                    <li><a href="delivery-policy.html" class="text-white text-decoration-none footer-link">Delivery Policy</a></li>
+                </ul>
+            </div>
+
+            <!-- Connect With Us Column -->
+            <div class="col-md-4 mb-4 footer-column">
+                <h5 class="mb-3">Connect With Us</h5>
+                <div class="d-flex flex-column">
+                    <a href="https://www.instagram.com" target="_blank" class="text-white mb-2 d-flex align-items-center footer-link">
+                        <i class="bi bi-instagram me-2" style="font-size: 20px;"></i> Instagram
+                    </a>
+                    <a href="https://www.facebook.com" target="_blank" class="text-white d-flex align-items-center footer-link">
+                        <i class="bi bi-facebook me-2" style="font-size: 20px;"></i> Facebook
+                    </a>
+                </div>
+            </div>
+
+            <!-- Contact Information Column -->
+            <div class="col-md-4 mb-4 footer-column">
+                <h5 class="mb-3">Contact Information</h5>
+                <p class="mb-2"><i class="bi bi-geo-alt me-2"></i>Tyre, Lebanon</p>
+                <p class="mb-2"><i class="bi bi-telephone me-2"></i>+961 1 234 567</p>
+                <p class="mb-2"><i class="bi bi-envelope me-2"></i>info@bloomshug.com</p>
+                <p class="mb-2"><i class="bi bi-clock me-2"></i>Mon - Sat / 9:00am - 5:00pm</p>
+            </div>
+        </div>
+
+        <!-- Divider -->
+        <hr class="border-secondary">
+
+        <!-- Copyright -->
+        <div class="text-center py-3 footer-column">
+            <p class="mb-0">&copy; 2025 <strong>Blooms Hug</strong>. All rights reserved.</p>
+        </div>
+    </div>
+
+    <!-- Footer Styling & Animation -->
+    <style>
+        .footer-link:hover {
+            color: #d6336c;
+            text-decoration: underline;
+        }
+        footer p, footer a {
+            font-size: 0.95rem;
+        }
+        footer h5 {
+            font-weight: 600;
+        }
+        /* Fade-in animation */
+        .footer-column {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+        .footer-column.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        @media (max-width: 768px) {
+            footer .d-flex {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</footer>
+
+<script>
+    // Fade-in animation on scroll
+    const footerColumns = document.querySelectorAll('.footer-column');
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    footerColumns.forEach(col => observer.observe(col));
+</script>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="cart.js"></script>
+</body>
+
+</html>

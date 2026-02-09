@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blooms Hug</title>
+
+    <head>
+
+        <!-- Bootstrap CSS (from CDN) -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <!-- For cart and profile icons (from CDN) -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;500;700&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm sticky-top">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand " href="#">
+                <img src="Blooms hug logo.jpg" class="rounded-pill" alt="Blooms Hug Logo" width="40" height="40"
+                    class="me-2" />
+                <span class="fw-bold" style="font-style:italic;">Blooms Hug</span>
+            </a>
+
+            <!-- Toggler -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navigation + Search + Icons -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Links -->
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#best-sellers">Best Sellers</a> </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button"
+                            data-bs-toggle="dropdown">Occasions</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#modern">Seasonal Blooms</a></li>
+                            <li><a class="dropdown-item" href="#wedding">Wedding Bouquets</a></li>
+                            <li><a class="dropdown-item" href="#graduation">Graduation Blooms</a></li>
+                            <li><a class="dropdown-item" href="#random">Random Bouquets</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="luxuryCollection.html">Luxury Collection</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+
+                <!-- Search Bar -->
+                <form class="d-flex ms-lg-3 mt-2 mt-lg-0" role="search" action="search.php" method="GET">
+                    <input class="form-control" style="margin-right: 1rem;" type="search" name="query"
+                        placeholder="Search category..." aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+
+
+                <!-- Icons: Cart + Profile -->
+                <ul class="navbar-nav ms-3 d-flex flex-row align-items-center">
+                    <li class="nav-item me-3">
+                        <a class="nav-link position-relative" href="cart.html" role="button">
+                            <i class="bi bi-cart" style="font-size: 1.4rem;"></i>
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                                id="cartCount">
+                                0
+                            </span>
+                        </a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.php">
+                            <i class="bi bi-person-circle" style="font-size: 1.5rem;"></i>
+                        </a>
+                    </li>
+
+                </ul>
+
+
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Carousel -->
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+        <!-- Indicators/dots -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+        </div>
+
+        <!-- The slideshow/carousel -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/home2.jpg" alt="Los Angeles" class="d-block w-100"
+                    style="height: 700px; object-fit: cover;">
+                <div class="carousel-caption left-center">
+                    <h3 style="font-family: 'Pacifico', cursive; color: #d4af37; font-size: 2.5rem;">
+                        Welcome to Blooms Hug
+                    </h3>
+
+                    <p style="font-family: 'Poppins', sans-serif; color: black; font-size: 1.5rem;">
+                        Brighten your day with our hand-picked flowers!
+                    </p>
+                    <a href="#best-sellers" class="btn btn-dark" style="font-family: 'Poppins', sans-serif;">
+                        Shop Now
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="images/home1.jpg" alt="Los Angeles" class="d-block w-100"
+                    style="height: 700px; object-fit: cover;">
+                <div class="carousel-caption right-center">
+                    <h4 style="font-family: 'Pacifico', cursive; color: #d4af37; font-size: 2rem;">
+                        Bouquets for Every Occasion
+                    </h4>
+                    <p style="font-family: 'Poppins', sans-serif; color: black; font-size: 1.4rem;">
+                        Celebrate life’s moments with <br>a touch of floral beauty.
+                    </p>
+
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/home3.jpg" alt="Los Angeles" class="d-block w-100"
+                    style="height: 700px; object-fit: cover;">
+                <div class="carousel-caption left-center">
+                    <h3 style="font-family: 'Pacifico', cursive; color: #d4af37; font-size: 2rem;">Blooms Hug Signature
+                    </h3>
+                    <p style="font-family: 'Poppins', sans-serif; color: black; font-size: 1.3rem;">Discover our most
+                        loved <br>floral arrangements.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Left and right controls/icons -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+
+    <!--About Section-->
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <!-- Text Column -->
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <h2 class="mb-4">About Us</h2>
+                    <p>
+                        At <strong>Blooms Hug</strong>, we’re more than just a flower shop — we’re a community of bloom
+                        lovers, spreading joy one bouquet at a time. Whether you're celebrating love, friendship,
+                        gratitude, or a simple moment of beauty, our carefully crafted floral designs help you say it
+                        with heart.
+                    </p>
+                    <p>
+                        Our team of expert florists sources only the freshest flowers, combining modern trends with
+                        timeless elegance. From everyday arrangements to luxury collections, we handcraft blooms that
+                        hug your soul.
+                    </p>
+                    <a href="contact.html" class="btn btn-success mt-3">Get in Touch</a>
+                </div>
+
+                <!-- Image Column -->
+                <div class="col-md-6">
+                    <img src="images/luxury7.png" alt="Blooms Hug Florists" class="img-fluid rounded shadow-sm"
+                        width="400px" height="100px">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+<!-- Best Sellers -->
+<section id="best-sellers" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4">Our Best Sellers</h2>
+        <p class="text-center mb-4">Our top-selling floral arrangements, loved by our customers!</p>
+
+        <div class="row">
+            <!-- Best Seller 1 -->
+            <div class="col-md-3 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div style="position: relative; height: 250px; overflow: hidden;">
+                        <img src="images/modern9.jpg" class="card-img-top" alt="Bloom Bouquet"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Bloom Bouquet</h5>
+                        <p class="card-text">Such a special bouquet to make someone smile.</p>
+                        <p class="card-text">$45</p>
+                        <button class="btn btn-success" onclick="addToCart('Bloom Bouquet', 45,'images/modern9.jpg')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Best Seller 2 -->
+            <div class="col-md-3 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div style="position: relative; height: 250px; overflow: hidden;">
+                        <img src="images/wedding3.jpg" class="card-img-top" alt="Peony and Rose Wedding Bouquet"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Peony and Rose Wedding Bouquet</h5>
+                        <p class="card-text">Soft pink peonies and romantic roses for a dreamy, feminine touch.</p>
+                        <p class="card-text">$109.99</p>
+                        <button class="btn btn-success" onclick="addToCart('Peony and Rose Wedding Bouquet', 109.99,'images/wedding3.jpg')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Best Seller 3 -->
+            <div class="col-md-3 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div style="position: relative; height: 250px; overflow: hidden;">
+                        <img src="images/wedding12.jpg" class="card-img-top" alt="Blushing Crimson Wedding Bouquet"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Blushing Crimson Wedding Bouquet</h5>
+                        <p class="card-text">Red dahlias and white small flowers that capture the essence of passionate love.</p>
+                        <p class="card-text">$119.99</p>
+                        <button class="btn btn-success" onclick="addToCart('Blushing Crimson Wedding Bouquet', 119.99,'images/wedding12.jpg')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Best Seller 4 -->
+            <div class="col-md-3 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div style="position: relative; height: 250px; overflow: hidden;">
+                        <img src="images/modern4.jpg" class="card-img-top" alt="Pop of Paradise"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Pop of Paradise</h5>
+                        <p class="card-text">This bouquet combines rich colors with a touch of elegance.</p>
+                        <p class="card-text">$36.99</p>
+                        <button class="btn btn-success" onclick="addToCart('Pop of Paradise', 36.99,'images/modern4.jpg')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Best Seller 5 -->
+            <div class="col-md-3 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div style="position: relative; height: 250px; overflow: hidden;">
+                        <img src="images/random6.jpg" class="card-img-top" alt="Elegant Handbag of Flowers"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Elegant Handbag of Flowers</h5>
+                        <p class="card-text">A beautiful mix of pink, white, and other seasonal blooms arranged in a chic handbag, ideal for any celebration or special moment.</p>
+                        <p class="card-text">$39.99</p>
+                        <button class="btn btn-success" onclick="addToCart('Elegant Handbag of Flowers', 39.99,'images/random6.jpg')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Best Seller 6 -->
+            <div class="col-md-3 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div style="position: relative; height: 250px; overflow: hidden;">
+                        <img src="images/random7.jpg" class="card-img-top" alt="Red & Pink Bloom"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Red & Pink Bloom</h5>
+                        <p class="card-text">A beautiful mix of vibrant red and soft pink flowers elegantly arranged in a glass jar — perfect for any special occasion.</p>
+                        <p class="card-text">$39.99</p>
+                        <button class="btn btn-success" onclick="addToCart('Red & Pink Bloom', 39.99,'images/random7.jpg')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Seasonal Bouquet -->
+<section id="modern" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">Our Seasonal Blooms Bouquets</h2>
+    <p class="text-center mb-4">A vibrant mix of seasonal flowers perfect for any cheerful celebration</p>
+
+    <div class="row" id="bouquetGrid">
+      <!-- Item 1 -->
+      <div class="col-md-3 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img src="images/modern1.png" class="card-img-top product-img" alt="Electric Bloom">
+          <div class="card-body text-center">
+            <h5 class="card-title">Electric Bloom</h5>
+            <p class="card-text">A burst of bright, electrifying colors that bring energy.</p>
+            <p class="card-text">$34.99</p>
+            <button class="btn btn-success"
+              onclick="addToCart('Electric Bloom', 34.99,'images/modern1.png')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="col-md-3 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img src="images/modern2.jpg" class="card-img-top product-img" alt="Pastel Mix Bouquet">
+          <div class="card-body text-center">
+            <h5 class="card-title">Pastel Mix Bouquet</h5>
+            <p class="card-text">Soft pinks, purples, and greens — ideal for spring celebrations.</p>
+            <p class="card-text">$34.99</p>
+            <button class="btn btn-success"
+              onclick="addToCart('Pastel Mix Bouquet', 34.99,'images/modern2.jpg')">Add to
+              Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="col-md-3 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img src="images/modern3.png" class="card-img-top product-img" alt="Bright Sunset">
+          <div class="card-body text-center">
+            <h5 class="card-title">Bright Sunset</h5>
+            <p class="card-text">A warm burst of oranges and reds perfect for summer vibes.</p>
+            <p class="card-text">$39.99</p>
+            <button class="btn btn-success"
+              onclick="addToCart('Bright Sunset', 39.99,'images/modern3.png')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="col-md-3 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img src="images/modern4.jpg" class="card-img-top product-img" alt="Pop of Paradise">
+          <div class="card-body text-center">
+            <h5 class="card-title">Pop of Paradise</h5>
+            <p class="card-text">This bouquet combines rich colors with a touch of elegance.</p>
+            <p class="card-text">$36.99</p>
+            <button class="btn btn-success"
+              onclick="addToCart('Pop of Paradise', 36.99,'images/modern4.jpg')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 5 -->
+      <div class="col-md-3 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img src="images/modern5.jpg" class="card-img-top product-img" alt="Color Rush">
+          <div class="card-body text-center">
+            <h5 class="card-title">Color Rush</h5>
+            <p class="card-text">Soft pinks, purples, and yellows — ideal for spring celebrations.</p>
+            <p class="card-text">$37</p>
+            <button class="btn btn-success"
+              onclick="addToCart('Color Rush', 37,'images/modern5.jpg')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 6 -->
+      <div class="col-md-3 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img src="images/modern6.jpg" class="card-img-top product-img" alt="Radiant Reverie">
+          <div class="card-body text-center">
+            <h5 class="card-title">Radiant Reverie</h5>
+            <p class="card-text">A perfect bouquet for bringing a serene yet lively ambiance to any
+              space.</p>
+            <p class="card-text">$24.99</p>
+            <button class="btn btn-success"
+              onclick="addToCart('Radiant Reverie', 24.99,'images/modern6.jpg')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 7 -->
+      <div class="col-md-3 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img src="images/modern7.jpg" class="card-img-top product-img" alt="Glamour Grove">
+          <div class="card-body text-center">
+            <h5 class="card-title">Glamour Grove</h5>
+            <p class="card-text">A mix of elegant, colorful flowers that bring a glamorous touch to any
+              occasion.</p>
+            <p class="card-text">$30</p>
+            <button class="btn btn-success"
+              onclick="addToCart('Glamour Grove',30,'images/modern7.jpg')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 8 -->
+      <div class="col-md-3 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img src="images/modern8.png" class="card-img-top product-img" alt="Rainbow Tulips">
+          <div class="card-body text-center">
+            <h5 class="card-title">Rainbow Tulips</h5>
+            <p class="card-text">A cheerful splash of every color to lift anyone’s day.</p>
+            <p class="card-text">$40</p>
+            <button class="btn btn-success"
+              onclick="addToCart('Rainbow Tulips', 40,'images/modern8.png')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hidden Items (9–15) -->
+      <div class="col-md-3 mb-4 extra-item d-none fade-in">
+        <div class="card h-100 shadow-sm">
+          <img src="images/modern9.jpg" class="card-img-top product-img" alt="Blooms Bouquet">
+          <div class="card-body text-center">
+            <h5 class="card-title">Blooms Bouquet</h5>
+            <p class="card-text">Colorful and vibrant bouquet perfect for all occasions.</p>
+            <p class="card-text">$49</p>
+            <button class="btn btn-success"
+              onclick="addToCart('Blooms Bouquet', 49,'images/modern9.jpg')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 mb-4 extra-item d-none fade-in">
+        <div class="card h-100 shadow-sm">
+          <img src="images/modern10.png" class="card-img-top product-img" alt="The Dream Bloom">
+          <div class="card-body text-center">
+            <h5 class="card-title">The Dream Bloom</h5>
+            <p class="card-text">A delicate blend of pastel flowers to create a dreamy effect.</p>
+            <p class="card-text">$32.50</p>
+            <button class="btn btn-success"
+              onclick="addToCart('The Dream Bloom', 32.50,'images/modern10.jpg')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 mb-4 extra-item d-none fade-in">
+        <div class="card h-100 shadow-sm">
+          <img src="images/modern11.png" class="card-img-top product-img" alt="Color Splash">
+          <div class="card-body text-center">
+            <h5 class="card-title">Color Splash</h5>
+            <p class="card-text">Bright and fun, this bouquet adds a splash of joy.</p>
+            <p class="card-text">$37</p>
+            <button class="btn btn-success"
+              onclick="addToCart('Color Splash', 37,'images/modern11.jpg')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 mb-4 extra-item d-none fade-in">
+        <div class="card h-100 shadow-sm">
+          <img src="images/modern12.png" class="card-img-top product-img" alt="Cherry Blossom">
+          <div class="card-body text-center">
+            <h5 class="card-title">Cherry Blossom</h5>
+            <p class="card-text">Soft, delicate pinks that bring the springtime indoors.</p>
+            <p class="card-text">$33</p>
+            <button class="btn btn-success"
+              onclick="addToCart('Cherry Blossom', 33,'images/modern12.jpg')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 mb-4 extra-item d-none fade-in">
+        <div class="card h-100 shadow-sm">
+          <img src="images/modern13.jpg" class="card-img-top product-img" alt="Pink Dream">
+          <div class="card-body text-center">
+            <h5 class="card-title">Pink Dream</h5>
+            <p class="card-text">Lush pinks and greens to create a dreamy ambiance.</p>
+            <p class="card-text">$29.50</p>
+            <button class="btn btn-success"
+              onclick="addToCart('Pink Dream', 29.50,'images/modern13.jpg')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 mb-4 extra-item d-none fade-in">
+        <div class="card h-100 shadow-sm">
+          <img src="images/modern14.jpg" class="card-img-top product-img" alt="Bold Blush">
+          <div class="card-body text-center">
+            <h5 class="card-title">Bold Blush</h5>
+            <p class="card-text">A rich, bold bouquet for those who love a splash of pink.</p>
+            <p class="card-text">$34.99</p>
+            <button class="btn btn-success"
+              onclick="addToCart('Bold Blush', 34.99,'images/modern14.jpg')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 mb-4 extra-item d-none fade-in">
+        <div class="card h-100 shadow-sm">
+          <img src="images/modern15.jpg" class="card-img-top product-img" alt="The Orchid Affair">
+          <div class="card-body text-center">
+            <h5 class="card-title">The Orchid Affair</h5>
+            <p class="card-text">Elegant orchids to bring sophistication to your space.</p>
+            <p class="card-text">$44.99</p>
+            <button class="btn btn-success"
+              onclick="addToCart('The Orchid Affair', 44.99,'images/modern15.jpg')">Add to
+              Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- View More / View Less Button -->
+    <div class="text-center mt-4">
+      <button id="toggleBtn" class="btn-pink">View More</button>
+    </div>
+  </div>
+</section>
+
+<!-- Styling -->
+<style>
+  /* Pink button styling */
+  .btn-pink {
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-weight: 500;
+    border-radius: 30px;
+    transition: 0.3s ease;
+  }
+
+  .btn-pink:hover {
+    background-color: #ff85c1;
+    color: white;
+  }
+
+  /* Force images to fill card */
+  .product-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-top-left-radius: 0.375rem;
+    border-top-right-radius: 0.375rem;
+  }
+
+  @media (max-width: 576px) {
+    .product-img {
+      height: 200px;
+    }
+  }
+
+  /* Fade-in animation */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+
+<!-- Script -->
+<script>
+  const toggleBtn = document.getElementById("toggleBtn");
+  const extraItems = document.querySelectorAll(".extra-item");
+
+  toggleBtn.addEventListener("click", () => {
+    if (toggleBtn.textContent === "View More") {
+      extraItems.forEach((item, index) => {
+        item.classList.remove("d-none");
+        setTimeout(() => {
+          item.classList.add("show");
+        }, index * 150); // stagger animation
+      });
+      toggleBtn.textContent = "View Less";
+    } else {
+      extraItems.forEach(item => {
+        item.classList.remove("show");
+        setTimeout(() => item.classList.add("d-none"), 600);
+      });
+      toggleBtn.textContent = "View More";
+    }
+  });
+</script>
+
+
+
+
+<!-- Wedding Collection -->
+<section id="wedding" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">Elegant Wedding Bouquets</h2>
+    <p class="text-center mb-4">Timeless designs to make your special day even more memorable</p>
+
+    <div class="row" id="weddingGrid">
+      <!-- Item 1 -->
+      <div class="col-md-3 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img src="images/wedding1.jpg" class="card-img-top product-img" alt="Blush Rose Wedding Bouquet">
+          <div class="card-body text-center">
+            <h5 class="card-title">Blush Rose Wedding Bouquet</h5>
+            <p class="card-text">A romantic blend of soft blush roses, perfect for a classic yet modern wedding.</p>
+            <p class="card-text">$99.99</p>
+            <button class="btn btn-success" onclick="addToCart('Blush Rose Wedding Bouquet', 99.99,'images/wedding1.jpg')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="col-md-3 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img src="images/wedding2.jpg" class="card-img-top product-img" alt="Ivory Lily Wedding Bouquet">
+          <div class="card-body text-center">
+            <h5 class="card-title">Ivory Lily Wedding Bouquet</h5>
+            <p class="card-text">Elegant ivory lilies combined with greenery, creating a serene and sophisticated bouquet.</p>
+            <p class="card-text">$89.99</p>
+            <button class="btn btn-success" onclick="addToCart('Ivory Lily Wedding Bouquet', 89.99,'images/wedding2.jpg')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="col-md-3 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img src="images/wedding3.jpg" class="card-img-top product-img" alt="Peony and Rose Wedding Bouquet">
+          <div class="card-body text-center">
+            <h5 class="card-title">Peony and Rose Wedding Bouquet</h5>
+            <p class="card-text">Soft pink peonies and romantic roses for a dreamy, feminine touch.</p>
+            <p class="card-text">$109.99</p>
+            <button class="btn btn-success" onclick="addToCart('Peony and Rose Wedding Bouquet', 109.99,'images/wedding3.jpg')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="col-md-3 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img src="images/wedding4.jpg" class="card-img-top product-img" alt="Tropical Luxe Wedding Bouquet">
+          <div class="card-body text-center">
+            <h5 class="card-title">Tropical Luxe Wedding Bouquet</h5>
+            <p class="card-text">A stunning combination of exotic tropical blooms, adding bold color and luxury to your celebration.</p>
+            <p class="card-text">$129.99</p>
+            <button class="btn btn-success" onclick="addToCart('Tropical Luxe Wedding Bouquet', 129.99,'images/wedding4.jpg')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 5 -->
+      <div class="col-md-3 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img src="images/wedding5.jpg" class="card-img-top product-img" alt="Vintage Rose and Lace Wedding Bouquet">
+          <div class="card-body text-center">
+            <h5 class="card-title">Vintage Rose and Lace Wedding Bouquet</h5>
+            <p class="card-text">Romantic vintage roses paired with delicate lace accents, perfect for a nostalgic wedding day.</p>
+            <p class="card-text">$119.99</p>
+            <button class="btn btn-success" onclick="addToCart('Vintage Rose and Lace Wedding Bouquet', 119.99,'images/wedding5.jpg')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 6 -->
+      <div class="col-md-3 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img src="images/wedding6.jpg" class="card-img-top product-img" alt="Rustic Wildflower Wedding Bouquet">
+          <div class="card-body text-center">
+            <h5 class="card-title">Rustic Wildflower Wedding Bouquet</h5>
+            <p class="card-text">A countryside-inspired bouquet featuring wildflowers and soft greenery for a natural, rustic feel.</p>
+            <p class="card-text">$99.99</p>
+            <button class="btn btn-success" onclick="addToCart('Rustic Wildflower Wedding Bouquet', 99.99,'images/wedding6.jpg')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 7 (hidden initially) -->
+      <div class="col-md-3 mb-4 extra-item d-none">
+        <div class="card h-100 shadow-sm">
+          <img src="images/wedding9.jpg" class="card-img-top product-img" alt="Crimson Elegance Wedding Bouquet">
+          <div class="card-body text-center">
+            <h5 class="card-title">Crimson Elegance Wedding Bouquet</h5>
+            <p class="card-text">A stunning mix of red roses and pure pink lilies, bringing a sense of passion and grace to your special day.</p>
+            <p class="card-text">$109.99</p>
+            <button class="btn btn-success" onclick="addToCart('Crimson Elegance Wedding Bouquet', 109.99,'images/wedding9.jpg')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 8 (hidden initially) -->
+      <div class="col-md-3 mb-4 extra-item d-none">
+        <div class="card h-100 shadow-sm">
+          <img src="images/wedding10.jpg" class="card-img-top product-img" alt="Scarlet Grace Wedding Bouquet">
+          <div class="card-body text-center">
+            <h5 class="card-title">Scarlet Grace Wedding Bouquet</h5>
+            <p class="card-text">A graceful combination of scarlet red flowers, symbolizing love and commitment for your wedding day.</p>
+            <p class="card-text">$119.99</p>
+            <button class="btn btn-success" onclick="addToCart('Scarlet Grace Wedding Bouquet', 119.99,'images/wedding10.jpg')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 9 (hidden initially) -->
+      <div class="col-md-3 mb-4 extra-item d-none">
+        <div class="card h-100 shadow-sm">
+          <img src="images/wedding11.jpg" class="card-img-top product-img" alt="Red Romance Wedding Bouquet">
+          <div class="card-body text-center">
+            <h5 class="card-title">Red Romance Wedding Bouquet</h5>
+            <p class="card-text">A timeless pairing of vibrant red roses, perfect for a classic wedding celebration.</p>
+            <p class="card-text">$129.99</p>
+            <button class="btn btn-success" onclick="addToCart('Red Romance Wedding Bouquet', 129.99,'images/wedding11.jpg')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 10 (hidden initially) -->
+      <div class="col-md-3 mb-4 extra-item d-none">
+        <div class="card h-100 shadow-sm">
+          <img src="images/wedding12.jpg" class="card-img-top product-img" alt="Blushing Crimson Wedding Bouquet">
+          <div class="card-body text-center">
+            <h5 class="card-title">Blushing Crimson Wedding Bouquet</h5>
+            <p class="card-text">A soft yet bold combination of blushing roses and crimson blooms for a stunning bridal bouquet.</p>
+            <p class="card-text">$139.99</p>
+            <button class="btn btn-success" onclick="addToCart('Blushing Crimson Wedding Bouquet', 139.99,'images/wedding12.jpg')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- View More / View Less Button -->
+    <div class="text-center mt-4">
+      <button id="toggleWeddingBtn" class="btn-pink">View More</button>
+    </div>
+  </div>
+</section>
+
+<!-- Styling -->
+<style>
+  /* Pink button */
+  .btn-pink {
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-weight: 500;
+    border-radius: 30px;
+    transition: 0.3s ease;
+  }
+
+  .btn-pink:hover {
+    background-color: #ff85c1;
+    color: white;
+  }
+
+  /* Product images */
+  .product-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-top-left-radius: 0.375rem;
+    border-top-right-radius: 0.375rem;
+  }
+
+  @media (max-width: 576px) {
+    .product-img {
+      height: 200px;
+    }
+  }
+
+  /* Fade-in animation */
+  .fade-in {
+    animation: fadeIn 0.6s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+
+<script>
+  const toggleWeddingBtn = document.getElementById("toggleWeddingBtn");
+  const weddingItems = document.querySelectorAll("#weddingGrid .extra-item");
+
+  toggleWeddingBtn.addEventListener("click", () => {
+    const isHidden = weddingItems[0].classList.contains("d-none");
+
+    if (isHidden) {
+      // Show with fade-in
+      weddingItems.forEach(item => {
+        item.classList.remove("d-none");
+        item.classList.add("fade-in");
+        // Remove fade-in after animation so it doesn't conflict next time
+        setTimeout(() => item.classList.remove("fade-in"), 600);
+      });
+      toggleWeddingBtn.textContent = "View Less";
+    } else {
+      // Hide again
+      weddingItems.forEach(item => {
+        item.classList.add("d-none");
+      });
+      toggleWeddingBtn.textContent = "View More";
+    }
+  });
+</script>
+
+
+<!-- Graduation Collection -->
+<section id="graduation" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4">Graduation Blooms</h2>
+        <p class="text-center mb-4">Celebrate academic milestones with flowers that say “Congratulations!”</p>
+
+        <div class="row" id="graduationGrid">
+            <!-- Visible Items -->
+            <div class="col-md-3 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="images/cong1.png" class="card-img-top product-img" alt="Red Triumph Bouquet">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Red Triumph Bouquet</h5>
+                        <p class="card-text">A stunning bouquet of vibrant red roses symbolizing success and achievement.</p>
+                        <p class="card-text">$34.99</p>
+                        <button class="btn btn-success" onclick="addToCart('Red Triumph Bouquet', 34.99,'images/cong1.png')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="images/cong2.png" class="card-img-top product-img" alt="Crimson Glory Bouquet">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Crimson Glory Bouquet</h5>
+                        <p class="card-text">A beautiful combination of deep red carnations and roses, perfect for celebrating academic milestones.</p>
+                        <p class="card-text">$34.99</p>
+                        <button class="btn btn-success" onclick="addToCart('Crimson Glory Bouquet', 34.99,'images/cong2.png')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="images/cong3.png" class="card-img-top product-img" alt="Radiant Red Bouquet">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Radiant Red Gift</h5>
+                        <p class="card-text">A bold and vibrant mix of red and white roses, symbolizing love and triumph.</p>
+                        <p class="card-text">$39.99</p>
+                        <button class="btn btn-success" onclick="addToCart('Radiant Red Bouquet', 39.99,'images/cong3.png')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="images/cong4.png" class="card-img-top product-img" alt="Red Bloom Box">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Red Bloom Box</h5>
+                        <p class="card-text">A rectangular box filled with striking red roses, perfect for a celebratory gift.</p>
+                        <p class="card-text">$44.99</p>
+                        <button class="btn btn-success" onclick="addToCart('Red Bloom Box', 44.99,'images/cong4.png')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hidden Items (5-8) -->
+            <div class="col-md-3 mb-4 extra-item d-none">
+                <div class="card h-100 shadow-sm">
+                    <img src="images/cong5.png" class="card-img-top product-img" alt="Blue Sky Box">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Blue Sky Box</h5>
+                        <p class="card-text">A sleek rectangular box filled with calming blue hydrangeas and irises, symbolizing peace and serenity.</p>
+                        <p class="card-text">$49.99</p>
+                        <button class="btn btn-success" onclick="addToCart('Blue Sky Box', 49.99,'images/cong5.png')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-4 extra-item d-none">
+                <div class="card h-100 shadow-sm">
+                    <img src="images/cong6.png" class="card-img-top product-img" alt="Pink Dreams Box">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Pink Dreams Box</h5>
+                        <p class="card-text">A lovely rectangular box filled with soft pink roses and peonies, perfect for a gentle congratulatory gift.</p>
+                        <p class="card-text">$49.99</p>
+                        <button class="btn btn-success" onclick="addToCart('Pink Dreams Box', 49.99,'images/cong6.png')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-4 extra-item d-none">
+                <div class="card h-100 shadow-sm">
+                    <img src="images/cong7.png" class="card-img-top product-img" alt="Off White Elegance Box">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Off White Elegance Box</h5>
+                        <p class="card-text">A simple and elegant box filled with off-white roses and lilies, symbolizing purity and grace.</p>
+                        <p class="card-text">$42</p>
+                        <button class="btn btn-success" onclick="addToCart('Off White Elegance Box', 42,'images/cong7.png')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-4 extra-item d-none">
+                <div class="card h-100 shadow-sm">
+                    <img src="images/cong8.png" class="card-img-top product-img" alt="Baby Pink Bliss Box">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Baby Pink Bliss Box</h5>
+                        <p class="card-text">A sweet and delicate box filled with baby pink roses, perfect for expressing congratulations.</p>
+                        <p class="card-text">$40</p>
+                        <button class="btn btn-success" onclick="addToCart('Baby Pink Bliss Box', 40,'images/cong8.png')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- View More / View Less Button -->
+        <div class="text-center mt-4">
+            <button id="toggleGraduationBtn" class="btn-pink">View More</button>
+        </div>
+    </div>
+</section>
+
+<!-- Smooth Fade-In Animation Styling -->
+<style>
+    .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    .fade-in.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .product-img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        border-top-left-radius: 0.375rem;
+        border-top-right-radius: 0.375rem;
+    }
+</style>
+
+<!-- Graduation Collection Script -->
+<script>
+    const toggleGraduationBtn = document.getElementById("toggleGraduationBtn");
+    const graduationItems = document.querySelectorAll("#graduationGrid .extra-item");
+
+    toggleGraduationBtn.addEventListener("click", () => {
+        if (graduationItems[0].classList.contains("d-none")) {
+            graduationItems.forEach((item, index) => {
+                item.classList.remove("d-none");
+                item.classList.add("fade-in");
+                setTimeout(() => item.classList.remove("fade-in"), 600);
+            });
+            toggleGraduationBtn.textContent = "View Less";
+        } else {
+            graduationItems.forEach(item => item.classList.add("d-none"));
+            toggleGraduationBtn.textContent = "View More";
+        }
+    });
+</script>
+
+<!-- Random Collection -->
+<section id="random" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Random Bouquet</h2>
+        <p class="text-center mb-4">Surprise your loved ones with a spontaneous bouquet full of charm.</p>
+
+        <div class="row" id="randomGrid">
+            <!-- Visible Items (1-8) -->
+            <div class="col-md-3 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="images/random1.jpg" class="card-img-top product-img" alt="Tulip Joy Box">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Hand-held Joy Box</h5>
+                        <p class="card-text">A delightful mix of pink and colorful flowers in a charming hand-held box, perfect for celebrating any special occasion.</p>
+                        <p class="card-text">$34.99</p>
+                        <button class="btn btn-success" onclick="addToCart('Tulip Joy Box', 34.99,'images/random1.jpg')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="images/random2.jpg" class="card-img-top product-img" alt="Tulip Bliss Box">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Tulip Bliss Jar</h5>
+                        <p class="card-text">An elegant Jar filled with a beautiful blend of pink and purple tulips, a perfect gift for any milestone celebration.</p>
+                        <p class="card-text">$39.99</p>
+                        <button class="btn btn-success" onclick="addToCart('Tulip Bliss Box', 39.99,'images/random2.jpg')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="images/random3.jpg" class="card-img-top product-img" alt="Tulip Harmony Box">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Tulip Harmony Jar</h5>
+                        <p class="card-text">A harmonious mix of pink and purple tulips arranged beautifully in a hand-held box, perfect for celebrating achievements.</p>
+                        <p class="card-text">$44.99</p>
+                        <button class="btn btn-success" onclick="addToCart('Tulip Harmony Box', 44.99,'images/random3.jpg')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="images/random4.jpg" class="card-img-top product-img" alt="Tulip Delight Box">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Tulip Delight Box</h5>
+                        <p class="card-text">A delightful combination of pink and purple tulips arranged in a hand-held box, offering a vibrant and fresh gift option.</p>
+                        <p class="card-text">$59.99</p>
+                        <button class="btn btn-success" onclick="addToCart('Tulip Delight Box', 59.99,'images/random4.jpg')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="images/random5.jpg" class="card-img-top product-img" alt="Mother's Day Handbag Flowers">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Mother's Day Handbag Flowers</h5>
+                        <p class="card-text">A heartfelt gift of soft pink and white flowers arranged beautifully in an elegant handbag, the perfect way to celebrate Mom on her special day.</p>
+                        <p class="card-text">$29.99</p>
+                        <button class="btn btn-success" onclick="addToCart('Mothers Day Handbag Flowers', 29.99,'images/random5.jpg')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="images/random6.jpg" class="card-img-top product-img" alt="Elegant Handbag of Flowers">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Elegant Handbag of Flowers</h5>
+                        <p class="card-text">A beautiful mix of pink, white, and other seasonal blooms arranged in a chic handbag, ideal for any celebration or special moment.</p>
+                        <p class="card-text">$39.99</p>
+                        <button class="btn btn-success" onclick="addToCart('Elegant Handbag of Flowers', 39.99,'images/random6.jpg')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="images/random7.jpg" class="card-img-top product-img" alt="Red & Pink Blooms">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Red & Pink Blooms</h5>
+                        <p class="card-text">A beautiful mix of vibrant red and soft pink flowers elegantly arranged in a glass jar — perfect for any special occasion.</p>
+                        <p class="card-text">$39.99</p>
+                        <button class="btn btn-success" onclick="addToCart('Red & Pink Blooms', 39.99,'images/random7.jpg')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="images/random8.jpg" class="card-img-top product-img" alt="Pink Elegance">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Pink Elegance</h5>
+                        <p class="card-text">Delicate pink flowers arranged in a glass jar, perfect for adding a touch of elegance and grace to any setting.</p>
+                        <p class="card-text">$34.99</p>
+                        <button class="btn btn-success" onclick="addToCart('Pink Elegance', 34.99,'images/random8.jpg')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hidden Items (9-12) -->
+            <div class="col-md-3 mb-4 extra-item d-none">
+                <div class="card h-100 shadow-sm">
+                    <img src="images/random9.jpg" class="card-img-top product-img" alt="Special Pink Jar">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Special Pink Jar</h5>
+                        <p class="card-text">Charming pink glass jar, offering a soft and graceful addition to any occasion.</p>
+                        <p class="card-text">$32.99</p>
+                        <button class="btn btn-success" onclick="addToCart('Special Pink Jar', 32.99,'images/random9.jpg')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4 extra-item d-none">
+                <div class="card h-100 shadow-sm">
+                    <img src="images/random10.jpg" class="card-img-top product-img" alt="Red Passion">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Red Passion</h5>
+                        <p class="card-text">Bold red flowers arranged in a glass jar — perfect for expressing love, passion, or celebration.</p>
+                        <p class="card-text">$39.99</p>
+                        <button class="btn btn-success" onclick="addToCart('Red Passion', 39.99,'images/random10.jpg')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4 extra-item d-none">
+                <div class="card h-100 shadow-sm">
+                    <img src="images/random11.jpg" class="card-img-top product-img" alt="Red & Baby Pink Bloom">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Red & Baby Pink Bloom</h5>
+                        <p class="card-text">A beautiful mix of red and baby pink flowers elegantly arranged in a charming box, perfect for any occasion.</p>
+                        <p class="card-text">$44.99</p>
+                        <button class="btn btn-success" onclick="addToCart('Red & Baby Pink Bloom', 44.99,'images/random11.jpg')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4 extra-item d-none">
+                <div class="card h-100 shadow-sm">
+                    <img src="images/random12.jpg" class="card-img-top product-img" alt="Colorful Bouquet">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Colorful Bouquet</h5>
+                        <p class="card-text">A stunning collection of vibrant flowers in a glass jar, featuring a beautiful mix of colors to brighten anyone’s day.</p>
+                        <p class="card-text">$23</p>
+                        <button class="btn btn-success" onclick="addToCart('Colorful Bouquet', 23,'images/random12.jpg')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- View More / View Less Button -->
+        <div class="text-center mt-4">
+            <button id="toggleRandomBtn" class="btn-pink">View More</button>
+        </div>
+    </div>
+</section>
+
+<!-- Random Collection Script -->
+<script>
+    const toggleRandomBtn = document.getElementById("toggleRandomBtn");
+    const randomItems = document.querySelectorAll("#randomGrid .extra-item");
+
+    toggleRandomBtn.addEventListener("click", () => {
+        if (randomItems[0].classList.contains("d-none")) {
+            randomItems.forEach((item, index) => {
+                item.classList.remove("d-none");
+                item.classList.add("fade-in");
+                setTimeout(() => item.classList.remove("fade-in"), 600);
+            });
+            toggleRandomBtn.textContent = "View Less";
+        } else {
+            randomItems.forEach(item => item.classList.add("d-none"));
+            toggleRandomBtn.textContent = "View More";
+        }
+    });
+</script>
+
+
+<!-- Footer Section -->
+<footer class="bg-dark text-white pt-5" id="footer">
+    <div class="container">
+        <div class="row">
+            <!-- Quick Links Column -->
+            <div class="col-md-4 mb-4 footer-column">
+                <h5 class="mb-3">Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#demo" class="text-white text-decoration-none footer-link">Home Page</a></li>
+                    <li><a href="#about" class="text-white text-decoration-none footer-link">About Us</a></li>
+                    <li><a href="#refund-policy" class="text-white text-decoration-none footer-link">Refund & Returns Policy</a></li>
+                    <li><a href="privacy-policy.html" class="text-white text-decoration-none footer-link">Privacy Policy</a></li>
+                    <li><a href="delivery-policy.html" class="text-white text-decoration-none footer-link">Delivery Policy</a></li>
+                </ul>
+            </div>
+
+            <!-- Connect With Us Column -->
+            <div class="col-md-4 mb-4 footer-column">
+                <h5 class="mb-3">Connect With Us</h5>
+                <div class="d-flex flex-column">
+                    <a href="https://www.instagram.com" target="_blank" class="text-white mb-2 d-flex align-items-center footer-link">
+                        <i class="bi bi-instagram me-2" style="font-size: 20px;"></i> Instagram
+                    </a>
+                    <a href="https://www.facebook.com" target="_blank" class="text-white d-flex align-items-center footer-link">
+                        <i class="bi bi-facebook me-2" style="font-size: 20px;"></i> Facebook
+                    </a>
+                </div>
+            </div>
+
+            <!-- Contact Information Column -->
+            <div class="col-md-4 mb-4 footer-column">
+                <h5 class="mb-3">Contact Information</h5>
+                <p class="mb-2"><i class="bi bi-geo-alt me-2"></i>Tyre, Lebanon</p>
+                <p class="mb-2"><i class="bi bi-telephone me-2"></i>+961 1 234 567</p>
+                <p class="mb-2"><i class="bi bi-envelope me-2"></i>info@bloomshug.com</p>
+                <p class="mb-2"><i class="bi bi-clock me-2"></i>Mon - Sat / 9:00am - 5:00pm</p>
+            </div>
+        </div>
+
+        <!-- Divider -->
+        <hr class="border-secondary">
+
+        <!-- Copyright -->
+        <div class="text-center py-3 footer-column">
+            <p class="mb-0">&copy; 2025 <strong>Blooms Hug</strong>. All rights reserved.</p>
+        </div>
+    </div>
+
+    <!-- Footer Styling & Animation -->
+    <style>
+        .footer-link:hover {
+            color: #d6336c;
+            text-decoration: underline;
+        }
+        footer p, footer a {
+            font-size: 0.95rem;
+        }
+        footer h5 {
+            font-weight: 600;
+        }
+        /* Fade-in animation */
+        .footer-column {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+        .footer-column.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        @media (max-width: 768px) {
+            footer .d-flex {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</footer>
+
+<script>
+    // Fade-in animation on scroll
+    const footerColumns = document.querySelectorAll('.footer-column');
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    footerColumns.forEach(col => observer.observe(col));
+</script>
+
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!--JS links -->
+    <script src="cart.js"></script>
+    <script src="login.js"></script>
+
+</body>
+
+</html>
